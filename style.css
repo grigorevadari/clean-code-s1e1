@@ -5,31 +5,28 @@
      font-family: Lato, sans-serif;
 }
 
-.manual {
+.page__box {
+     display: block;
      width: 500px;
      margin: 0 auto;
-     display: block;
+}
+
+.manual {
      text-align: right;
 }
 
-.manual img {
+.manual__img {
      width: 100%;
 }
 
-.more {
+.manual__more {
      font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
-.manual {
-     text-align: center;
- }
-}
-
-.content {
-     display: block;
-     width: 500px;
-     margin: 0 auto 0;
+@media (max-width: 768px) {
+     .manual {
+          text-align: center;
+     }
 }
 
 .task {
@@ -38,22 +35,22 @@
      flex-grow: 1;
 }
 
-.box {
+.new-task__wrap {
      display: flex;
 }
 
-ul {
+.list {
      margin: 0;
      padding: 0px;
 }
 
-li,
-h3 {
+.item,
+.title {
      list-style: none;
 }
 
-input,
-button{
+.text,
+.btn {
      outline: none;
 }
 
@@ -100,16 +97,16 @@ button{
 }
 
 /* New Task */
-.title-new-task {
+.new-task__title {
      display: block;
      margin: 0 0 20px;
 }
 
-#new-task {
+.new-task__text {
      width: 318px;
 }
 
-.add-btn:hover {
+.new-task__btn:hover {
      color: #0fc57c;
 }
 
@@ -118,61 +115,56 @@ button{
      overflow: hidden;
      padding: 20px 0;
      border-bottom: 1px solid #eee;
-
      display: flex;
      justify-content: space-between;
      align-items: center;
 }
 
-.item > * {
-     vertical-align: middle;
-}
-
-.checkbox {
+.item__checkbox {
      margin: 0 10px;
 }
 
-.desc {
+.item__desc {
      padding-left: 10px;
      box-sizing: border-box;
      font-size: 18px;
      width: 226px;
 }
 
-.item > .text {
+.item__text {
      width: 226px;
 }
 
-.delete:hover {
+.item__delete:hover {
      color: #cf2323;
 }
 
-.delete-img {
+.item__delete-img {
      height: 2em;
      transform: rotateZ(45deg);
      transition: transform 200ms ease-in;
 }
 
-.delete-img:hover {
+.item__delete-img:hover {
      transform: rotateZ(0);
 }
 
 /* Completed */
-#completed .desc {
+.completed .item__desc {
      text-decoration: line-through;
      color: #888;
 }
 
 /* Edit Task */
-.item > .text {
+.item__text {
      display: none;
 }
 
-.edit-mode > .text {
+.todo__item_edit .item__text {
      display: inline-block;
      width: 224px;
 }
 
-.edit-mode .desc {
+.todo__item_edit .item__desc {
      display: none;
 }
